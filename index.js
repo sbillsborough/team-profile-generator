@@ -20,5 +20,9 @@ function init() {
   promptUser();
 }
 
+function promptUser() {
+  
+}
+
 // function call to initialize program
 init();
