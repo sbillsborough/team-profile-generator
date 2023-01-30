@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/sbillsborough/team-profile-generator/issues"
   },
-  "homepage": "https://github.com/sbillsborough/team-profile-generator#readme"
+  "homepage": "https://github.com/sbillsborough/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^29.4.1"
+  }
 }
