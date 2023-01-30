@@ -35,7 +35,7 @@ Made to practise Node.js with the inquirer package and Test Driven Development w
 
 - Install Node.js
 - Pull the repository to your computer
-- cd to the root folder of the repository
+- cd to the root folder of the repository in your terminal application (VS Code, Bash etc.)
 - Run 'npm i inquirer@^8.0.0' in the terminal to install Inquirer Package
 - Run 'npm i jest' in the terminal to install the Jest test suite
 - Open node and from the root directory run 'node index.js'
