@@ -167,6 +167,71 @@ function createEngineer() {
   });
 }
 
+function createIntern() {
+  inquirer.prompt([
+    {
+      type: 'input',
+      message: 'Enter Intern\'s name.',
+      name: 'intrnName',
+      validate: (intrnName) => {
+        if (intrnName) {
+          return true;
+        }
+        else {
+          console.log('Enter Intern\'s name.');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      message: 'Enter Intern\'s ID.',
+      name: 'intrnId',
+      validate: (intrnId) => {
+        if (intrnId) {
+          return true;
+        }
+        else {
+          console.log('Enter Intern\'s name.');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      message: 'Enter Intern\'s email.',
+      name: 'intrnEmail',
+      validate: (intrnEmail) => {
+        if (intrnEmail) {
+          return true;
+        }
+        else {
+          console.log('Enter Intern\'s email.');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      message: 'Enter Intern\'s school name.',
+      name: 'school',
+      validate: (school) => {
+        if (school) {
+          return true;
+        }
+        else {
+          console.log('Enter Intern\'s school name.');
+          return false;
+        }
+      }
+    },
+  ]).then((answers) => {
+    const Intern = new Intern(answers.intrnName, answers.intrnId, answers.intrnEmail, answers.school);
+    teamArray.push(Intern);
+    run();
+  });
+}
+
 
 
 // function to initialize program
