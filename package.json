@@ -22,5 +22,8 @@
   "homepage": "https://github.com/sbillsborough/team-profile-generator#readme",
   "devDependencies": {
     "jest": "^29.4.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.5"
   }
 }
