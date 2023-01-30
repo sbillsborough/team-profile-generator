@@ -96,9 +96,9 @@ function createManager() {
       }
     },
   ]).then((answers) => {
-    const Manager = new Manager(answers.mngrName, answers.mngrId, answers.mngrEmail, answers.mngrOfficeNumber);
-    teamArray.push(Manager);
-    run();
+    const manager = new Manager(answers.mngrName, answers.mngrId, answers.mngrEmail, answers.mngrOfficeNumber);
+    teamArray.push(manager);
+    init();
   });
 }
 
@@ -161,9 +161,9 @@ function createEngineer() {
       }
     },
   ]).then((answers) => {
-    const Engineer = new Engineer(answers.engrName, answers.engrId, answers.engrEmail, answers.github);
-    teamArray.push(Engineer);
-    run();
+    const engineer = new Engineer(answers.engrName, answers.engrId, answers.engrEmail, answers.github);
+    teamArray.push(engineer);
+    init();
   });
 }
 
@@ -226,12 +226,20 @@ function createIntern() {
       }
     },
   ]).then((answers) => {
-    const Intern = new Intern(answers.intrnName, answers.intrnId, answers.intrnEmail, answers.school);
-    teamArray.push(Intern);
-    run();
+    const intern = new Intern(answers.intrnName, answers.intrnId, answers.intrnEmail, answers.school);
+    teamArray.push(intern);
+    init();
   });
 }
 
+function createTeam() {
+  console.log("Team has successfully been created!")
+  fs.writeFile('./result_html/index.html', render(teamArray), function (err) {
+    if (err) {
+      return console.log(err)
+    }
+  });
+}
 
 
 // function to initialize program
