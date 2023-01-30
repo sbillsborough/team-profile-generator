@@ -102,6 +102,71 @@ function createManager() {
   });
 }
 
+function createEngineer() {
+  inquirer.prompt([
+    {
+      type: 'input',
+      message: 'Enter Engineer\'s name.',
+      name: 'engrName',
+      validate: (engrName) => {
+        if (engrName) {
+          return true;
+        }
+        else {
+          console.log('Enter Engineer\'s name.');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      message: 'Enter Engineer\'s ID.',
+      name: 'engrId',
+      validate: (engrID) => {
+        if (engrID) {
+          return true;
+        }
+        else {
+          console.log('Enter Engineer\'s ID.');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      message: 'Enter Engineer\'s email.',
+      name: 'engrEmail',
+      validate: (engrEmail) => {
+        if (engrEmail) {
+          return true;
+        }
+        else {
+          console.log('Enter Engineer\'s email.');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      message: 'Enter Engineer\'s GitHub username.',
+      name: 'github',
+      validate: (github) => {
+        if (github) {
+          return true;
+        }
+        else {
+          console.log('Enter Engineer\'s GitHub username.');
+          return false;
+        }
+      }
+    },
+  ]).then((answers) => {
+    const Engineer = new Engineer(answers.engrName, answers.engrId, answers.engrEmail, answers.github);
+    teamArray.push(Engineer);
+    run();
+  });
+}
+
 
 
 // function to initialize program
